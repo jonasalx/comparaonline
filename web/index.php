@@ -23,5 +23,5 @@
 	  echo 'name, sellIn, price';
           echo '<br>';
 	  $carInsurance->updatePrice();
-          echo '<br>';echo '<br>';
+          echo '<br><br>';
 	}
