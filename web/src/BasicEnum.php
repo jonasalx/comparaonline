@@ -26,7 +26,7 @@ abstract class BasicEnum {
         return in_array(strtolower($name), $keys);
     }
     
-    public static function getName($name){
+    public static function getNameClass($name){
         $constants = self::getConstants();
         foreach ( $constants as  $clave=>$value )
             if($value==$name) return $clave;

@@ -18,7 +18,7 @@ class CarInsurance {
 
     public function updatePrice() {
         for ($i = 0; $i < count($this->products); $i++) {
-            $class = TypeProduct::getName($this->products[$i]->name);
+            $class = TypeProduct::getNameClass($this->products[$i]->name);
 
             $son = new $class($this->products[$i]->name, $this->products[$i]->sellIn, $this->products[$i]->price);
             $son->calculatePrice();
@@ -26,7 +26,7 @@ class CarInsurance {
             $this->products[$i]->sellIn = $son->sellIn;
             $this->products[$i]->price = $son->price;
 
-            echo $this->products[$i]->name . ' ' . $this->products[$i]->sellIn . ' ' . $this->products[$i]->price;
+            echo $this->products[$i]->name . ', ' . $this->products[$i]->sellIn . ', ' . $this->products[$i]->price;
             echo "<br>";
         }
     }

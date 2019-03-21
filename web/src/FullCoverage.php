@@ -7,9 +7,10 @@ class FullCoverage extends Product implements CalculatePrice{
     }
     
     public function calculatePrice(){
+    	$this->sellIn --;
     	if( $this->sellIn >= 0) $this->price += 1;
     	else $this->price += 2;
-    	$this->sellIn --;
+    	if ($this->price >50) $this->price = 50;
     }
 
 }
